@@ -1,5 +1,5 @@
 # အခြေခံအနေနဲ့ Java ပါပြီးသား ပေါ့ပေါ့ပါးပါး OS တစ်ခုကို သုံးမယ်
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-alpine
 
 # App ကိုထားမယ့် folder ဆောက်မယ်
 WORKDIR /usr/app
