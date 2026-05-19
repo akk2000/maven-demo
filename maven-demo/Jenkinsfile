@@ -1,0 +1,23 @@
+pipeline{
+  agent any
+  stages{
+    stage('Build'){
+      steps{
+        echo 'Building Process ... '
+      }
+    }
+
+    tage('Test'){
+      steps{
+        echo 'Testing Process ... '
+      }
+    }
+
+    tage('Deploy'){
+      steps{
+        echo 'Deplolying Process ... '
+      }
+    }
+    
+  }
+}
