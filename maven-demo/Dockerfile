@@ -6,7 +6,7 @@ WORKDIR /usr/app
 
 # မင်း ခုနက build လုပ်လို့ထွက်လာတဲ့ JAR ဖိုင်ကို Container ထဲ ကူးထည့်မယ်
 # သတိထားရန်: နာမည်ကို မင်းရဲ့ target folder ထဲကအတိုင်း အတိအကျရေးပါ
-COPY target/maven-demo-1.0-SNAPSHOT.jar app.jar
+COPY maven-demo/target/maven-demo-1.0-SNAPSHOT.jar app.jar
 
 # App က port 8080 မှာ အလုပ်လုပ်မှာမို့လို့ ဖွင့်ပေးထားမယ်
 EXPOSE 8080
