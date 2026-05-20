@@ -1,6 +1,6 @@
 def buildJar(){
     echo 'Building Jar File ... '
-    sh 'mvn package'
+    sh 'mvn -f maven-demo/pom.xml package'
 }
 
 def buildImage(){
