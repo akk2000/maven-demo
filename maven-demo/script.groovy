@@ -1,14 +1,15 @@
-def buildApp(){
-    echo 'Building Process ... ' 
+def buildJar(){
+    echo 'Building Jar File ... '
+    sh 'mvn package'
 }
 
-def testApp(){
-    echo 'Testing Process ... '
-}
-
-def deployApp(){
-    echo 'Deplolying Process ... '
-    echo "Deploying the version ${params.VERSION}"
+def buildImage(){
+    echo 'Building Image ... '
+    withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'pwd', usernameVariable: 'user')]){
+        sh 'docker build -t happytaipan/my-maven-app:2.0 .'
+        sh 'echo $pwd | docker login -u $user --password-stdin'
+        sh 'docker push happytaipan/my-maven-app:2.0'
+    }
 }
 
 return this
